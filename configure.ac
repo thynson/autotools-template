@@ -23,13 +23,11 @@ AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE([1.11 dist-xz])
 
-# Checking C compiler
-AC_PROG_CC
+AC_PROG_CC([clang gcc])
+AC_PROG_CXX([clang++ g++])
 
-# Checking C++ compiler
-AC_PROG_CXX
-
-
+AC_LANG([C++])
+AX_CXX_COMPILE_STDCXX_11([noext],[mandatory])
 
 # libtool if needed
 AM_PROG_LIBTOOL
@@ -37,11 +35,6 @@ LT_INIT
 
 #
 AM_SILENT_RULES([yes])
-
-
-
-AC_PROG_CC([clang gcc])
-AC_PROG_CXX([clang++ g++])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
