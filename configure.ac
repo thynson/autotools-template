@@ -18,7 +18,7 @@ AC_PREREQ([2.67])
 # Change to your project name and version
 AC_INIT([auto-template], [0.0.1])
 
-AC_CONFIG_MACRO_DIR([build-aux/m4])
+AC_CONFIG_MACRO_DIRS([build-aux/m4 m4])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE([1.11 dist-xz])
